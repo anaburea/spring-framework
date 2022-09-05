@@ -25,6 +25,7 @@ public class CarController {
     public String carInfo2(@RequestParam(value="make",required = false, defaultValue="Tesla") String make, @RequestParam Integer year, Model model){
 
         model.addAttribute("make", make);
+        model.addAttribute("year", year);
 
         return "/car/car-info";
 
